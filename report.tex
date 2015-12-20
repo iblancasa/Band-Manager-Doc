@@ -1,5 +1,5 @@
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
+\documentclass[11pt,spanish]{article}
+\usepackage{selinput}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -10,8 +10,9 @@
 
 %%%%%%%%%%%%%%%
 % Title Page
-\title{\LaTeX\ template for business reports}
-\author{Karol Kozioł \newline / Company Name / Company Address}
+\title{Band Manager}
+\author{Sistema para gestión de agrupaciones musicales
+        \newline / Israel Blancas}
 \date{\today}
 %%%%%%%%%%%%%%%
 
@@ -21,72 +22,134 @@
 \tableofcontents
 \clearpage
 
-\section{Features commands}
+\section{Introducción}
 
-\subsection{Pictures used}
+\subsection{Breve estado del arte}
 
 \noindent
-Cover picture filename (in titlepage): \texttt{cover}\\
-Logo filename (in foot): \texttt{logo}
+Las bandas de música, orquestas y otros colectivos musicales, son grupos
+formados por cierta cantidad de personas. Cuando el número de componentes es reducido,
+la gestión de los mismos es relativamente sencilla pero, al aumentar el número de estos,
+la situación puede volverse bastante complicada: la gestión de material, del patrimonio
+musical, de material (tal como instrumentos o uniformes),
+pasar lista, comunicaciones entre la junta directiva o el director con los componentes...
 
-\subsection{Boxes}
 
-\begin{verbatim}
-\fullboxbegin
-Content
-\fullboxend
-\end{verbatim}
-
-\begin{verbatim}
-\leftboxbegin
-Content
-\leftboxend
-\end{verbatim}
-
-\begin{verbatim}
-\rightboxbegin
-Content
-\rightboxend
-\end{verbatim}
-
-\begin{verbatim}
-\frameboxbegin{Frame Title}
-Content
-\frameboxend
-\end{verbatim}
-
-\newpage
-
-\section{First section}
-\lipsum[1]
-
-\fullboxbegin
-\lipsum[1]
-\fullboxend
-
-\lipsum[1]
-
-\subsection{First subsection}
-\lipsum[1]
-
-\leftboxbegin
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. 
-\leftboxend
-
-\lipsum[1-2]
-
-\rightboxbegin
+\subsection{Problemática}
+Estos problemas se tratan de solventar mediante diversos sistemas:
 \begin{itemize}
- \item Lorem ipsum
- \item Lorem ipsum
+  \item \textbf{Comunicación director-componentes:} gracias a que el sistema de mensajería
+  \textit{WhatsApp} insertó la opción de crear grupos o difusiones, la comunicación entre
+  los miembros de la agrupación se ha facilitado. Por contra, si algún componente no
+  desea facilitar a sus compañeros su número de teléfono (probablemente, la agrupación
+  tenga guardado el número de teléfono, pero puede no ser del agrado del músico el compartirlo
+  con el resto de compañeros), se  verá con menos posibilidades de estar
+  comunicado que el resto
+  \item \textbf{Gestión de material:} se realiza mediante anotaciones en cuadernos o documentos \textit{Excel}
+  (o similares). En el caso de mantener un registro mediante un cuaderno, si este se pierde, se dejan de tener datos.
+  En caso de los documentos \textit{Excel}, puede ocurrir que la máquina que los tenga almacenados sufra algún
+  tipo de avería,  perdiéndose la información. En ambos casos,
+  puede ser costoso mantener el registro actualizado
+  \item \textbf{Gestión de patrimonio musical:} las partituras permiten a los músicos conocer cómo
+  interpretar una obra. Sin ellas, la actividad que desarrollan deja de tener sentido.
+  Es por eso que es necesario que las bandas cuiden de su patrimonio musical. \newline
+  Una obra se compone de la   participación de distintos instrumentos (o varios componentes que tocan
+  el mismo instrumento,
+  interpretando melodías diferentes). Cada una de las melodías que deben interpretarse en una obra,
+  vienen recogidas en un guión (que es la partitura de la que dispone el director) y en las “partichelas”
+  (una partitura que solo consta de la melodía que tiene que tocar un intérprete con su instrumento).
+  Actualmente, la gestión de este material se realiza guardándolo en carpetas (fotocopiándolas cuando es necesario)
+  y mediante ficheros generados por programas de notación musical (en cuyo caso quedan almacenadas en las máquinas de
+  los músicos).
+  En ambos casos, la probabilidad de que los datos se pierdan o deterioren es bastante alta.
+  \item \textbf{Pasar lista:} también se realiza mediante cuadernos, que pueden perderse o deteriorarse.
 \end{itemize}
-\rightboxend
 
-\lipsum[1]
+Con el producto a desarrollar, se desea mejorar las soluciones que actualmente existen,
+tratando de erradicar estas problemáticas y algunas otras.
 
-\subsubsection{First subsubsection}
+\subsection{Servicios existentes}
+Aunque existe algún servicio que ya trata de solucionar todos estos puntos (bien orientado a
+solucionar solo alguno de estos problemas o bien todos): no se cubren todas las necesidades,
+la tecnología con la que cuentan es antigua (no ofreciéndole al usuario una experiencia suficientemente buena),
+sus precios son demasiado elevados o no están bien orientados al “target” que nos ocupa.
 
-\lipsum[1]
+
+
+\section{Producto a desarrollar}
+
+\subsection{Breve definición}
+Se quiere desarrollar un sistema similar a lo que actualmente hacen los ERP (sistemas de planificación de recursos empresariales)
+en las empresas que permita la gestión y
+coordinación de los miembros de una banda de música, permitiendo
+gestión del patrimonio (material, intangible, humano...).
+\newline
+Aunque el producto esté pensado para grupos donde el número de personas con las
+que trabajar sea bastante grande, no habrá
+problema en que otros más pequeños puedan utilizarlo.
+\newline
+El producto será un servicio web que se podrá contratar por parte de la banda.
+Es decir, la agrupación solo tendrá que solicitar el servicio y podrá empezar a dar
+de alta a sus componentes (no tendrá que contratar servicios externos de almacenamiento web,
+dispositivos físicos ni nada parecido). Los responsables de la banda, una vez
+contratado el servicio, solo tendrán que preocuparse de la gestión de material, partituras,
+fichas de componentes... nunca del software ni de la plataforma.
+
+
+\subsection{Problemas a resolver}
+Los principales puntos que deberá solucionar el sistema que se propone:
+\begin{itemize}
+  \item Gestión de patrimonio humano
+  \item Gestión de material físico
+  \item Gestión de patrimonio musical
+  \item Comunicación entre junta/director/responsables y músicos
+  \item Posibilidad de que los clientes potenciales de la banda dispongan de
+  material para valorar si desean contratar o no a la formación
+\end{itemize}
+
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
+
+Además, entre otros objetivos se pretende:
+\begin{itemize}
+  \item \textbf{Alta usabilidad:} es deseable que cualquier usuario pueda usarlo,
+    incluso aunque sus conocimientos
+  \item \textbf{Diseño amigable:} un diseño amigable animará al usuario a utilizar el sistema
+  \item \textbf{Bajo precio:} un bajo coste ayudará a ofrecer a los clientes un precio más bajo
+  \item \textbf{Escalabilidad:} que el número de bandas/componentes que pueda albergar el sistema
+  pueda sea grande y pueda aumentarse fácilmente
+  \item \textbf{Seguridad:} la seguridad es un punto muy importante a tener en cuenta
+\end{itemize}
+
+
+En las siguientes subsecciones se va a analizar brévemente algunas de las necesidades a
+resolver.
+
+\subsubsection{Gestión de patrimonio humano}
+Mediante una interfaz sencilla, que los responsables de la banda puedan añadir/modificar/dar
+de baja a los músicos. Para ello, se dispondrá de una ficha online con los siguientes datos de cada músico:
+\begin{itemize}
+  \item Nombre y apellidos
+  \item Número de teléfono
+  \item DNI (o lo que proceda)
+  \item email
+  \item Fecha de nacimiento
+  \item Fianza*
+  \item Fecha de ingreso
+  \item Ocupación**
+  \item Instrumento
+  \item Fotografía
+  \item Material asociado***
+  \item Identificativo
+\end{itemize}
+\footnotesize{*Hace referencia a la cantidad de fianza entregada por un miembro
+de la banda. En muchas agrupaciones se estipula una cantidad que es devuelta tras entregar
+el material prestado por la banda.}\\
+\footnotesize{**Permitirá estimar qué permisos tiene cada usuario (a unas operaciones
+o zonas)}\\
+\footnotesize{***Material prestado por la banda al músico}
+Grupos a los que pertenece: que se puedan crear grupos y añadir a los usuarios a los grupos. Estos grupos podrán tener permisos para acceder a un tipo u otro de material. Grupos especiales son: responsables, junta directiva y director
+
+
 
 \begin{figure}[!h]
 \centering
@@ -94,37 +157,4 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 \caption{The sky is the limit.}
 \end{figure}
 
-\section*{Unnumbered section}
-\lipsum[1]
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.5\textwidth]{sky.jpg}
-\caption*{The sky is the limit.}
-\end{figure}
-
-\section{Second section}
-
-\lipsum[1]
-\begin{table}[!h]
-\centering
-\caption{Sample table.}
-\begin{tabular}{cccc}
-\toprule
-Value 1 & Value 2 & Value 3 & Value 4\\
-\midrule
- odd     & odd   & odd & 1.00 \\
- even    & even  & even& 1.00 \\
- odd     & odd   & odd & 1.00 \\
- even    & even  & even& 1.00 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\lipsum[1]
-
-\frameboxbegin{Sample frame}
-\lipsum[1]
-\frameboxend
-
-\end{document}          
+\end{document}
