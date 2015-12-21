@@ -94,6 +94,10 @@ de alta a sus componentes (no tendrá que contratar servicios externos de almace
 dispositivos físicos ni nada parecido). Los responsables de la banda, una vez
 contratado el servicio, solo tendrán que preocuparse de la gestión de material, partituras,
 fichas de componentes... nunca del software ni de la plataforma.
+\newline
+Por otra parte, aunque estemos hablando de una aplicación web, es más cómodo
+para los usuarios la disponibilidad de una aplicación móvil, que se irá desarrollando
+para los distintos sistemas operativos del mercado según vaya siendo posible.
 
 
 \subsection{Problemas a resolver}
@@ -129,17 +133,18 @@ Mediante una interfaz sencilla, que los responsables de la banda puedan añadir/
 de baja a los músicos. Para ello, se dispondrá de una ficha online con los siguientes datos de cada músico:
 \begin{itemize}
   \item Nombre y apellidos
+  \item Identificativo
+  \item Fotografía
   \item Número de teléfono
   \item DNI (o lo que proceda)
+  \item Dirección postal
   \item email
   \item Fecha de nacimiento
   \item Fianza*
   \item Fecha de ingreso
   \item Ocupación**
   \item Instrumento
-  \item Fotografía
   \item Material asociado***
-  \item Identificativo
 \end{itemize}
 \footnotesize{*Hace referencia a la cantidad de fianza entregada por un miembro
 de la banda. En muchas agrupaciones se estipula una cantidad que es devuelta tras entregar
@@ -147,6 +152,12 @@ el material prestado por la banda.}\\
 \footnotesize{**Permitirá estimar qué permisos tiene cada usuario (a unas operaciones
 o zonas)}\\
 \footnotesize{***Material prestado por la banda al músico}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth]{img/patrimoniohumano.jpg}
+\caption{Esquema sobre gestión de patrimonio musical}
+\end{figure}
 
 \subsubsection{Gestión de patrimonio físico}
 Mediante la creación de un "catálogo" con todo el material del que dispone la banda,
@@ -158,11 +169,17 @@ o quién tiene uno de esos materiales. Es decir, se tendrá una ficha donde se s
   \item Tipo
   \item Estado
   \item Fotografía
-  \item Quién lo tiene actualmente
+  \item Actual poseedor
 \end{itemize}
 
-Además, para favorecer la rápida identificación de un material, se quiere
-disponer de un etiquetado como un código de barras o código QR.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth]{img/patrimoniofisico.jpg}
+\caption{Esquema sobre gestión de patrimonio musical}
+\end{figure}
+
+Además, para favorecer la rápida identificación de un material, se
+dispondrá de un etiquetado como un código de barras o código QR.
 
 
 \subsubsection{Gestión de patrimonio musical}
@@ -172,6 +189,7 @@ responsables estas tareas.\\
 Un responsable de banda podrá subir las distintas partichelas y asignarlas a los
 distintos músicos, de forma que puedan acceder a ellas cuando lo necesiten. Esto
 permitirá, además, que los documentos se encuentren a salvo en la plataforma.
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.5\textwidth]{img/patrimonio_musical.jpg}
@@ -182,10 +200,17 @@ El sistema contará también con un catálogo común de partituras (de forma que
 responsable de banda pueda importar a su banda una composición).
 
 
+
 \subsubsection{Comunicación entre junta/director/responsables y músicos}
 Se quiere permitir que, aquellos usuarios que tengan los permisos necesarios,
 puedan enviar mensajes de difusión a los distintos grupos de músicos (o a todos los
 músicos de la banda) de la forma más sencilla posible.
+\newline
+Como se comentó en la breve descripción (\ref{breveDescripcion}), se tiene
+planteado el desarrollo de una aplicación móvil para cada uno de los principales
+sistemas operativos móviles (lo que permitirá que, tras enviarse un mensaje, todos
+los usuarios lo reciban al instante). En caso que no exista aplicación para los sistemas
+operativos móviles de
 
 
 \end{document}
