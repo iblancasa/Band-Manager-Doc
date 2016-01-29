@@ -1,5 +1,6 @@
 \documentclass[11pt,spanish]{article}
 \usepackage{selinput}
+\usepackage{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -15,7 +16,7 @@
 % Title Page
 \title{Band Manager}
 \author{Sistema para gestión de agrupaciones musicales
-        \newline / Israel Blancas}
+        \newline / Israel Blancas Álvarez}
 %%%%%%%%%%%%%%%
 
 \begin{document}
@@ -162,7 +163,7 @@ o zonas)}\\
 \end{figure}
 
 \subsubsection{Gestión de patrimonio físico}
-Mediante la creación de un "catálogo" con todo el material del que dispone la banda,
+Mediante la creación de un \"catálogo\" con todo el material del que dispone la banda,
 se podrá saber cuándo es necesario renovarlo, la cantidad de material que hay sin utilizar
 o quién tiene uno de esos materiales. Es decir, se tendrá una ficha donde se sepa:
 
@@ -208,11 +209,23 @@ Se quiere permitir que, aquellos usuarios que tengan los permisos necesarios,
 puedan enviar mensajes de difusión a los distintos grupos de músicos (o a todos los
 músicos de la banda) de la forma más sencilla posible.
 \newline
-Como se comentó en la breve descripción (\ref{breveDescripcion}), se tiene
+Como se comentó en la breve descripción, se tiene
 planteado el desarrollo de una aplicación móvil para cada uno de los principales
 sistemas operativos móviles (lo que permitirá que, tras enviarse un mensaje, todos
-los usuarios lo reciban al instante). En caso que no exista aplicación para los sistemas
-operativos móviles de
+los usuarios lo reciban al instante). También se permitirá enviar estos mensajes al
+correo electrónico (así, un usuario que tenga un dispositivo móvil para el que no se
+haya desarrollado aplicación la aplición, podrá también recibir las notificaciones).
+
+
+\subsection{Superadministradores}
+Hay que tener en cuenta la diferencia entre los distintos tipos de usuarios:
+\begin{itemize}
+  \item Usuario músico: es el usuario final. Accede a aquel contenido
+  que tiene permiso
+  \item Usuario administrador: gestiona una banda de música. Gestiona a los músicos y
+  el material relacionado con ellos
+  \item Superadministrador
+\end{itemize}
 
 
 \end{document}
